@@ -360,7 +360,7 @@ public class Camera2RecordActivity extends AppCompatActivity implements TextureV
     //配置ImageReader
     private void setupImageReader() {
         //2代表ImageReader中最多可以获取两帧图像流
-        mImageReader = ImageReader.newInstance(0.5*mCaptureSize.getWidth(), 0.5*mCaptureSize.getHeight(),
+        mImageReader = ImageReader.newInstance(mCaptureSize.getWidth(), mCaptureSize.getHeight(),
                 ImageFormat.JPEG, 2);
         mImageReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
             @Override
