@@ -549,6 +549,7 @@ public class Camera2RecordActivity extends AppCompatActivity implements TextureV
             mPreviewSession.stopRepeating();
             //咔擦拍照
             mPreviewSession.capture(mCaptureBuilder.build(), CaptureCallback, null);
+            finsh();
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
