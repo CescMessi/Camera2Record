@@ -407,6 +407,7 @@ public class Camera2RecordActivity extends AppCompatActivity implements TextureV
                             Intent intent = new Intent(Camera2RecordActivity.this, Camera2Config.ACTIVITY_AFTER_CAPTURE);
                             intent.putExtra(Camera2Config.INTENT_PATH_SAVE_PIC, picSavePath);
                             startActivity(intent);
+                            finsh();
                         }
                         break;
                 }
@@ -549,7 +550,6 @@ public class Camera2RecordActivity extends AppCompatActivity implements TextureV
             mPreviewSession.stopRepeating();
             //咔擦拍照
             mPreviewSession.capture(mCaptureBuilder.build(), CaptureCallback, null);
-            finsh();
         } catch (CameraAccessException e) {
             e.printStackTrace();
         }
