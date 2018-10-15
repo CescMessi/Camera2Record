@@ -338,12 +338,13 @@ public class Camera2RecordActivity extends AppCompatActivity implements TextureV
             Log.e(TAG, height + "----" + width);
 
             //获取相机支持的最大拍照尺寸
-            mCaptureSize = Collections.max(Arrays.asList(map.getOutputSizes(ImageFormat.JPEG)), new Comparator<Size>() {
-                @Override
-                public int compare(Size lhs, Size rhs) {
-                    return Long.signum(lhs.getWidth() * lhs.getHeight() - rhs.getHeight() * rhs.getWidth());
-                }
-            });
+            //mCaptureSize = Collections.max(Arrays.asList(map.getOutputSizes(ImageFormat.JPEG)), new Comparator<Size>() {
+            //    @Override
+            //    public int compare(Size lhs, Size rhs) {
+            //        return Long.signum(lhs.getWidth() * lhs.getHeight() - rhs.getHeight() * rhs.getWidth());
+            //    }
+            //});
+            mCaptureSize = mPreviewSize;
 
             configureTransform(width, height);
 
