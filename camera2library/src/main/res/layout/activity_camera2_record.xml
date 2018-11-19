@@ -7,8 +7,7 @@
     <TextureView
         android:id="@+id/textureView"
         android:layout_width="match_parent"
-        android:layout_above="@+id/rl_takePhoto"
-        android:layout_marginBottom="0dp" />
+        android:layout_height="350dp" />
 
     <com.cktim.camera2library.camera.ProgressView
         android:id="@+id/progressView"
