@@ -38,7 +38,7 @@
             android:layout_below="@+id/iv_takePhoto"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="25dp"
-            android:text="单击拍照"
+            android:text="@string/capture"
             android:textColor="@color/white"
             android:textSize="12sp" />
 
