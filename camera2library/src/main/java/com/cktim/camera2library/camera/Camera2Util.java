@@ -130,7 +130,7 @@ public class Camera2Util {
      * 使用Camera2录制和所拍的照片都会在这里
      */
     public static String getCamera2Path() {
-        String picturePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/CameraV2/";
+        String picturePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "/";
         File file = new File(picturePath);
         if (!file.exists()) {
             file.mkdirs();
